@@ -68,21 +68,14 @@ internal class Program
 
 
 
-
-
-
-
-
-
-
-
-
         builder.Services.AddDbContext<ApiDbContext>(options =>
         {
             options.UseNpgsql(builder.Configuration.GetConnectionString("ApiDbContext"));
         });
 
         var app = builder.Build();
+
+        MigrateDb(app);
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
@@ -99,5 +92,15 @@ internal class Program
         app.MapControllers();
 
         app.Run();
+
+
+        void MigrateDb(WebApplication app)
+        {
+            var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
+
+            using var scope = scopeFactory.CreateScope();
+            var dbContext = scope.ServiceProvider.GetRequiredService<ApiDbContext>();
+            dbContext.Database.Migrate();
+        }
     }
 }

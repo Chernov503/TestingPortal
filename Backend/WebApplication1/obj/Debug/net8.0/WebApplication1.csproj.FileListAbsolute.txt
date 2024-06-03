@@ -337,3 +337,4 @@ C:\Games\TestingPortal\Backend\WebApplication1\obj\Debug\net8.0\refint\WebApplic
 C:\Games\TestingPortal\Backend\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
 C:\Games\TestingPortal\Backend\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 C:\Games\TestingPortal\Backend\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
+C:\Games\TestingPortal\Backend\WebApplication1\obj\Debug\net8.0\WebApplication1.sourcelink.json
