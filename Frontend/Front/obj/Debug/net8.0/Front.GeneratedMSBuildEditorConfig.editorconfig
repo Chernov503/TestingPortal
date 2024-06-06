@@ -1,0 +1,67 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = Front
+build_property.RootNamespace = Front
+build_property.ProjectDir = C:\Games\TestingPortal\Frontend\Front\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Games\TestingPortal\Frontend\Front
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Games/TestingPortal/Frontend/Front/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/admin/AdminTests.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cQWRtaW5UZXN0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/auth/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYXV0aFxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/auth/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYXV0aFxSZWdpc3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/Other/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/Other/MainMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJcTWFpbk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/Other/UserMenuComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJcVXNlck1lbnVDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/sudo/Sudo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcc3Vkb1xTdWRvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-pzwjewwokz
+
+[C:/Games/TestingPortal/Frontend/Front/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-lucr43k91g

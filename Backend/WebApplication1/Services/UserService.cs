@@ -155,18 +155,25 @@ namespace WebApplication1.Services
             await _userRepository.Create(entity);
         }
 
-        public async Task<string> Login(LoginUserRequest request)
+        public async Task<LoginResponse?> Login(LoginUserRequest request)
         {
             var entity = await _userRepository.FindByEmail(request.email);
+
+            if(entity == null)
+            {
+                return null;
+            }
 
             var isVerified = _passwordHasher.Verify(request.password, entity.Password);
 
 
             if (isVerified)
             {
-                return _jwtProvider.GenerateToken(entity);
+                return new LoginResponse(
+                    token: _jwtProvider.GenerateToken(entity),
+                    status: entity.Status);
             }
-            else throw new Exception("Bad Login");
+            else return null;
         }
 
     }

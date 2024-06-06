@@ -20,7 +20,6 @@ namespace WebApplication1.Controllers
 
 
         [HttpPut]
-        [Route("/sudo")]
         public async Task<ActionResult<bool>> GetUserPremissions([FromBody] ChangeStaffStatus request)
         {
             if (request.status > 3 || request.status < 0) return BadRequest("Incorrect user status");
@@ -32,10 +31,16 @@ namespace WebApplication1.Controllers
 
 
         [HttpDelete]
-        [Route("/sudo")]
         public async Task<ActionResult<bool>> DeleteUser([FromBody]string userId)
         {
             return Ok(await _superAdminService.DeleteUser(Guid.Parse(userId)));
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<UserResponse>>> GetUsers()
+        {
+            var id = Guid.Parse(Request.Headers["asckerId"].ToString());
+            return Ok(await _superAdminService.GetUsers(id));
         }
 
 

@@ -1,0 +1,89 @@
+@page "/login"
+@inject HttpClient http
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+
+
+<header style="margin-bottom:50px">
+        <MainMenu/>
+</header>
+
+
+<section style="width:50%; margin: 0 auto">
+    <EditForm Model="@loginModel" OnValidSubmit="@HandleValidSubmit" FormName="loginForm">
+        <DataAnnotationsValidator />
+        <div class="form-group">
+            <MudTextField @bind-Value="loginModel.Email" Label="Email" InputType="InputType.Email"></MudTextField>
+        </div>
+        <div class="form-group">
+            <MudTextField @bind-Value="loginModel.Password" Label="Пароль" InputType="InputType.Password"></MudTextField>
+            <ValidationMessage For="@(() => loginModel.Password)" />
+        </div>
+        <div style="text-align:center">
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Outlined" Color="Color.Success" Style="margin:20px" >Войти</MudButton>
+        </div>
+    </EditForm>
+</section>
+
+@code{
+    [Inject] IAuth _authService { get; set; }
+    [Inject] private NavigationManager _navigationManager { get; set; }
+
+    public LoginModel loginModel { get; set; } = new();
+
+    protected async Task HandleValidSubmit()
+    {
+        var request = new LoginUserRequest(
+            email: loginModel.Email,
+            password: loginModel.Password
+        );
+
+        HttpStatusCode httpStatus;
+        int? userStatus = 0;
+        string token = String.Empty;
+
+        try
+        {
+            (httpStatus, token, userStatus) = await _authService.Login(request);
+        }
+        catch
+        {
+            Snackbar.Add("Неверный логин и/или пароль", Severity.Error);
+            return;
+        }
+
+
+        if (httpStatus == System.Net.HttpStatusCode.OK) 
+        {
+            await _authService.JwtToSessionStorage(token);
+
+            Snackbar.Add("Успешно!", Severity.Success);
+
+            switch (userStatus)
+            {
+                case 0:
+                    {
+                        _navigationManager.NavigateTo("/User/tests");
+                        break;
+                    }
+                case 1:
+                    {
+                        _navigationManager.NavigateTo("/Moderator/users");
+                        break;
+                    }
+                case 2:
+                    {
+                        _navigationManager.NavigateTo("/admin/tests");
+                        break;
+                    }
+                case 3:
+                    {
+                        _navigationManager.NavigateTo("/sudo");
+                        break;
+                    }
+            }
+
+        }
+        else { Snackbar.Add("Неверный логин и/или пароль", Severity.Error); }
+    }
+}

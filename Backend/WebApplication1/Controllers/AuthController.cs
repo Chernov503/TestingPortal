@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Abstractions;
 using WebApplication1.DTOs;
+using WebApplication1.Filters;
 
 namespace WebApplication1.Controllers
 {
@@ -18,18 +19,20 @@ namespace WebApplication1.Controllers
 
         [HttpPost]
         [Route("/login")]
-        public async Task<ActionResult<string>> Login([FromBody] LoginUserRequest request)
+        public async Task<ActionResult<LoginResponse>> Login([FromBody] LoginUserRequest request)
         {
             try
             {
-                var token = await _userService.Login(request);
-                return Ok(token);
+                var loginResponse = await _userService.Login(request);
+                if (loginResponse == null) { return BadRequest("invalid email"); }
+                return Ok(loginResponse);
             }
             catch (Exception ex) { return BadRequest(ex.Message); }
         }
 
         [HttpPost]
         [Route("/register")]
+        [TypeFilter(typeof(RegisterFilter))]
         public async Task<ActionResult> Register([FromBody] RegisterUserRequest request)
         {
             try

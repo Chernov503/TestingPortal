@@ -26,5 +26,17 @@ namespace WebApplication1.Services
             var test = await _testRepository.GetById(testId);
             return test.CompanyOwners;
         }
+
+        public async Task<bool> IsEmailRegistered(string email)
+        {
+            var user = await _userRepository.FindByEmail(email);
+            return user != null;
+        }
+
+        public async Task<int?> GetUserStatusByEmail(string email)
+        {
+            var user = await _userRepository.FindByEmail(email);
+            return user.Status;
+        }
     }
 }

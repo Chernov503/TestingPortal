@@ -2,12 +2,12 @@
 {
     public record UserResponse(
         Guid Id,
-        string Password,
+        string? Password,
         string FirstName,
         string SurName,
         string Email,
         string Company,
-        string Status);
+        int? Status);
 }
 
 

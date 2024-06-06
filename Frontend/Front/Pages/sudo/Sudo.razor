@@ -1,0 +1,112 @@
+﻿@page "/sudo"
+
+@using Front.Services
+@inject ISnackbar Snackbar
+
+
+
+<PageTitle>sudo</PageTitle>
+
+<div style="text-align:right">
+    <UserMenuComponent></UserMenuComponent>
+</div>
+
+ 
+
+<div>
+    <MudDataGrid Items="@Users" Filterable="true" FilterMode="@_filterMode" FilterCaseSensitivity="@_caseSensitivity">
+        <Columns>
+            <PropertyColumn Property="x => x.FirstName" Title="Имя" Filterable="true" />
+            <PropertyColumn Property="x => x.SurName" Title="Фамилия" Filterable="true"/>
+            <PropertyColumn Property="x => x.Email" Title="Почта"/>
+            <PropertyColumn Property="x => x.Company" Title="Организация" Filterable="true" />
+            <PropertyColumn Property="x => x.Status" Title="Уровень" Filterable="true" />
+            <TemplateColumn CellClass="d-flex justify-end">
+                <CellTemplate>
+                    <MudStack Row>
+                        <MudButton Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Primary" OnClick="@(()=>SetAdmin(context))">Администратор</MudButton>
+                        <MudIconButton Icon="@Icons.Material.Filled.Delete" ButtonType="ButtonType.Reset" Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Error" OnClick="@(() => Delete(context))" />
+                    </MudStack>
+                </CellTemplate>
+            </TemplateColumn>
+        </Columns>
+        <PagerContent>
+            <MudDataGridPager T="UserResponse" />
+        </PagerContent>
+    </MudDataGrid>
+
+@*     <Dialog @bind-Visible="showDialog">
+        <DialogTitle>Confirm Delete</DialogTitle>
+        <DialogContent>
+            Are you sure you want to delete this user?
+        </DialogContent>
+        <DialogFooter>
+            <button @onclick="DeleteUser">Yes</button>
+            <button @onclick="Cancel">No</button>
+        </DialogFooter>
+    </Dialog> *@
+
+
+    @code {
+        [Inject] ISudoService _superAdminService { get; set; }
+
+        private const int ADMIN_STATUS = 2;
+
+
+        List<UserResponse> Users = new List<UserResponse>();
+
+        DataGridFilterMode _filterMode = DataGridFilterMode.Simple;
+        DataGridFilterCaseSensitivity _caseSensitivity = DataGridFilterCaseSensitivity.Default;
+
+        protected override async Task OnInitializedAsync()
+        {
+            Users = await _superAdminService.GetUsers();
+        }
+
+        protected async Task Delete(CellContext<UserResponse> u)
+        {
+            //проверить есть ли Id в сущности
+            var isDeleted = await _superAdminService.DeleteUser(u.Item.Id);
+
+            if (isDeleted)
+            {
+                Snackbar.Add("Успешно!", Severity.Success);
+                Users.Remove(u.Item);
+            }
+            else
+            {
+                Snackbar.Add("Ошибка удаления!", Severity.Error);
+            }
+
+
+        }
+
+        protected async Task SetAdmin(CellContext<UserResponse> u)
+        {
+            if(u.Item.Status == ADMIN_STATUS)
+            {
+                Snackbar.Add("Пользователь уже имеет статус администратора!", Severity.Error);
+                return;
+            }
+
+            var isUpdated = await _superAdminService.SetAdminUser(u.Item.Id);
+
+            if (isUpdated)
+            {
+                Snackbar.Add("Успешно!", Severity.Success);
+
+                var oldUser = Users.Where(x => x.Id == u.Item.Id).Single();
+                Users.Remove(oldUser);
+                var user = u.Item with { Status = 2 };
+                Users.Add(user);
+            }
+            else
+            {
+                Snackbar.Add("Ошибка!", Severity.Error);
+            }
+        }
+}
+
+
+
+</div>

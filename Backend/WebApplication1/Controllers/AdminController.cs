@@ -24,7 +24,7 @@ namespace WebApplication1.Controllers
 
         [HttpGet]
         [Route("tests")]
-        public async Task<ActionResult<List<UserResponse>>> GetTests()
+        public async Task<ActionResult<List<TestResponse>>> GetTests()
         {
             var asckerId = Guid.Parse(HttpContext.Request.Headers["asckerId"].ToString());
             return Ok(await _adminService.GetCompanyTests(asckerId)); 

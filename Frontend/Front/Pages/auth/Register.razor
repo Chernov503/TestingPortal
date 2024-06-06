@@ -1,0 +1,90 @@
+@page "/register"
+@inject HttpClient http
+@inject ISnackbar Snackbar
+
+<PageTitle>Register</PageTitle>
+
+<header style="margin-bottom:50px">
+    <MainMenu/>
+</header>
+
+<section style="width: 50%; margin: 0 auto;">
+            <div class="row">
+                <EditForm Model="@registerModel" OnValidSubmit="@HandleValidSubmit" FormName="sampleForm">
+                    <DataAnnotationsValidator />
+
+                    <div class="form-group">
+                        <MudTextField @bind-Value="registerModel.Firstname" Label="Имя" Variant="Variant.Text"></MudTextField>
+                    </div>
+                    <div class="form-group">
+                        <MudTextField @bind-Value="registerModel.Surname" Label="Фамилия" Variant="Variant.Text"></MudTextField>
+                    </div>
+                    <div class="form-group">
+                        <MudTextField @bind-Value="registerModel.Email" Label="Email" Variant="Variant.Text" InputType="InputType.Email"></MudTextField>
+                        <ValidationMessage For="@(() => registerModel.Email)" />
+                    </div>
+                    <div class="form-group">
+                        <MudTextField @bind-Value="registerModel.Company" Label="Организация" Variant="Variant.Text"></MudTextField>
+                    </div>
+                    <div class="form-group">
+                        <MudTextField @bind-Value="registerModel.Password" Label="Пароль" Variant="Variant.Text" InputType="InputType.Password"></MudTextField>
+                        <ValidationMessage For="@(() => registerModel.Password)" />
+                    </div>
+                    <div class="form-group">
+                        <MudTextField @bind-Value="registerModel.Password2" Label="Снова пароль" Variant="Variant.Text" InputType="InputType.Password"></MudTextField>
+                        <ValidationMessage For="@(() => registerModel.Password2)" />
+                    </div>
+                    <div style="text-align:center">
+                        <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Outlined" Color="Color.Success" Style="margin:20px">Регистрация</MudButton>
+                    </div>
+                </EditForm>
+            </div>
+</section>
+
+@code {
+
+    [Inject] IAuth _authService {get; set;}
+    [Inject] private NavigationManager _navigationManager { get; set; }
+
+    public RegisterModel registerModel { get; set; } = new();
+
+    public string Message { get; set; } = String.Empty;
+
+
+
+    // protected async override Task OnInitializedAsync()
+    // {
+    // }
+
+    protected async Task HandleValidSubmit()
+    {
+        var request = new RegisterUserRequest(
+            registerModel.Password,
+            registerModel.Firstname,
+            registerModel.Surname,
+            registerModel.Email,
+            registerModel.Company
+        );
+        var httpStatusCode = await _authService.Register(request);
+
+        switch (httpStatusCode)
+        {
+            case System.Net.HttpStatusCode.OK:
+                {
+                    Snackbar.Add("Registed", Severity.Success);
+                    break;
+                }
+            case System.Net.HttpStatusCode.Conflict:
+                {
+                    Snackbar.Add("User with this email registered already", Severity.Error);
+                    break;
+                }
+            default:
+                {
+                    Snackbar.Add("Register Error", Severity.Error);
+                    break;
+                }
+        }
+    }
+
+}

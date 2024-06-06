@@ -1,0 +1,353 @@
+﻿@page "/"
+
+
+<body>
+    <header>
+            <MainMenu/>
+    </header>
+
+
+    <section>
+        <div class="container">
+            <div class="rightCollumn">
+                <img src="https://i.ibb.co/2tYmdwc/image.png" alt="Png" class="Png" height="500" width="700" >
+            </div>
+            <div class="leftCollumn">
+                <div class="text">
+                    <h1>Усильте Безопасность<br> вашей команды​</h1>
+                    <p>Новый инструмент позволит вам<br> проводить обучение сотрудников<br>и отслеживать их результат</p>
+                    <MudStack Row="true">
+                    <MudTextField T="string" Label="Email" Required="true" RequiredError="Email is required!"/>
+                    <MudButton Variant="Variant.Outlined">Консультация</MudButton>
+                    </MudStack>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="leftCollumn">
+                <img src="https://i.ibb.co/yYrgdsf/image3.png" alt="Png" class="Png" height="500" width="700" >
+            </div>
+            <div class="rightCollumn">
+                <div class="text">
+                    <h1>​​Управление заданиями​</h1>
+                    <p>Сформируйте тест из банка заданий по темам<br>или составьте собственные вопросы<br>с картинками или видео</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="rightCollumn">
+                <img src="https://i.ibb.co/xXrV0Ld/image4.png" alt="Png" class="Png" height="500" width="750" >
+            </div>
+            <div class="leftCollumn">
+                <div class="text">
+                    <h1>​​Статистика</h1>
+                    <p>Отслеживайте успехи и неудачи<br>своих сотрудников после прохождения<br>тестирования</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <div class="leftCollumn">
+                <img src="https://i.ibb.co/dbqdLpb/image5.png" alt="Png" class="Png" height="500" width="700" >
+            </div>
+            <div class="rightCollumn">
+                <div class="text">
+                    <h1>Комьюнити</h1>
+                    <p>Создавайте публичные тесты или<br>пользуйтесь уже опубликованными,<br>обменивайтесь своими вопросами<br>в публичном банке заданий</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="Levels">
+                <h1>3 Уровня пользователей</h1>
+                <div class="Columns">
+                    <div>
+                        <h2>Пользователь</h2>
+                        <p>Ваш сотрудник, проходящий<br>обучение​</p>
+                    </div>
+                    <div>
+                        <h2>Эксперт</h2>
+                        <p>Назначает сотрудникам задания<br> и отслеживает успешность<br> их выполнения​</p>
+                    </div>
+                    <div>
+                        <h2>Модератор</h2>
+                        <p>Формирует тесты и вопросы<br> к вашим заданиям. Назначает<br> экспертов​</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="Contacts">
+                <h1>Контакты</h1>
+                <p>arina@mail.ru</p>
+                <div class="SocialContacts">
+                    <MudTooltip Text="Telegram">
+                        <MudFab Icon="@Icons.Custom.Brands.Telegram" Color="Color.Primary" Href= "https://telegram.org"/>
+                    </MudTooltip>
+                    <MudTooltip Text="WhatsApp">
+                        <MudFab Icon="@Icons.Custom.Brands.WhatsApp" Color="Color.Primary" Href="https://web.whatsapp.com/" />
+                    </MudTooltip>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <footer>
+        <div style = "padding: 45px;">
+         
+        </div>
+    </footer>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    body {
+    font-family:'Open Sans';
+    padding: 0;
+}
+
+h1{
+    padding-top: 40px;
+    font-size: 33px;
+    font-weight: 300;
+}
+h2{
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+p{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1150px;
+    height: 544px;
+    margin: auto;
+}
+
+section {
+    padding: 20px 0px 20px 0x;
+}
+button{
+    border-color: rgba(6, 10, 10, 0.504);
+    border-width: 3px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0;
+    border-radius: 10px;
+    box-shadow: none;
+    background-color: rgba(4, 7, 7, 0.05);
+    font-size: 15px;
+    color: rgba(1, 1, 12, 0.466);
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+
+
+header {
+    height: 80px;
+    letter-spacing: 5px;
+    font-size: 15px;
+    font-weight: 100;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+.menu {
+    padding: 0;
+    margin: 0;
+    display: block;
+
+}
+.menu li {
+    float: left;
+    display: block;
+    text-align: center;
+    flex: 1;
+    padding: 20px
+    
+}
+.menu li a{
+    color: black;
+    text-decoration: none;
+    
+}
+.menu li a:hover{
+    color: rgb(7, 7, 122);
+}
+nav {
+    text-align: center;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+
+
+
+
+.leftCollumn {
+    float: left;
+}
+
+.rightCollumn{
+    float: right;
+}
+input{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 10px;
+    font-weight: 100px;
+}
+
+
+
+
+input{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    height: 35px;
+    width: 250px;
+    border-color: rgba(36, 34, 34, 0.26);
+    box-shadow: none;
+    text-indent: 10px;
+    outline: none;
+    caret-color: rgba(8, 9, 9, 0.245);
+}
+
+.ConsulButton{
+width: 140px;
+height: 39px;
+padding-top: 4px;
+}
+
+.icon-link{
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.Levels {
+    text-align: center;
+}
+
+.Columns div{
+    display: inline-table;
+    flex: 1;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.Contacts{
+text-align: center;
+}
+
+footer{
+    font-size: 10px;
+    width: 100%;
+    height: 100px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.61);
+    color: rgb(6, 6, 6);
+
+}
+
+
+
+
+.LoginForm{
+text-align: center;
+padding-top: 100px;
+}
+
+
+
+
+
+
+.field{
+    display:grid;
+    text-align: left;
+    color: rgb(6, 6, 6);
+}
+.RegisterInputs p1{
+    padding: 7px;
+    font-weight: 500;
+}
+.Name p1{
+    margin-left: 10px;
+}
+.RegisterInputs nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.RegisterInputs input{
+    width: 520px;
+}
+.RegisterInputs button{
+    margin-top: 20px;
+    height: 30px;
+    width: 150px;
+}
+.Name{
+    display: inline-flex;
+}
+.Name input{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 250px;
+}
+
+</style>
+
+
+
