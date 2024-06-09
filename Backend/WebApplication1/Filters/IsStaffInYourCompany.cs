@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
 using WebApplication1.Abstractions;
+using WebApplication1.DTOs;
 
 namespace WebApplication1.Filters
 {
@@ -15,15 +16,7 @@ namespace WebApplication1.Filters
         }
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            
-            var userId = Guid.Parse( context.ActionArguments["userId"].ToString() );
-
-            var asckerCompany = context.HttpContext.Request.Headers["company"];
-            var userCompany = await _customFilterService.GetUserCompanyName(userId);
-
-            if (!String.Equals(asckerCompany, userCompany))
-            { context.Result = new ForbidResult(); return; }
-
+            //TODO: Придумать защиту
             await next();
         }
     }

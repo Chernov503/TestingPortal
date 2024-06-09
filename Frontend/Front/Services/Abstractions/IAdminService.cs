@@ -6,7 +6,7 @@ namespace Front.Services.Abstractions
     {
         public Task<List<TestResponse>> GetTests();
         public Task<bool> DeleteTest(Guid testId);
-        public Task<bool> CreateTest(CreateTestRequest request);
+        public Task<bool> CreateTest(CreateTest requestBody);
         public Task<List<UserResponse>> GetUsers();
         public Task<bool> PutUserStatus(ChangeStaffStatus changeStaff);
         public Task<bool> DeleteUser(Guid userId);

@@ -1050,3 +1050,8 @@ C:\Games\TestingPortal\Frontend\Front\bin\Debug\net8.0\wwwroot\_framework\Blazor
 C:\Games\TestingPortal\Frontend\Front\bin\Debug\net8.0\Blazored.LocalStorage.dll
 C:\Games\TestingPortal\Frontend\Front\obj\Debug\net8.0\webcil\Blazored.LocalStorage.wasm
 C:\Games\TestingPortal\Frontend\Front\obj\Debug\net8.0\compressed\1emj3s2iiy.gz
+C:\Games\TestingPortal\Frontend\Front\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.DataAnnotations.Validation.wasm
+C:\Games\TestingPortal\Frontend\Front\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.DataAnnotations.Validation.wasm.gz
+C:\Games\TestingPortal\Frontend\Front\bin\Debug\net8.0\Microsoft.AspNetCore.Components.DataAnnotations.Validation.dll
+C:\Games\TestingPortal\Frontend\Front\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.DataAnnotations.Validation.wasm
+C:\Games\TestingPortal\Frontend\Front\obj\Debug\net8.0\compressed\km7uh5ybgj.gz

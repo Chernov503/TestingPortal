@@ -16,12 +16,13 @@ namespace WebApplication1.Controllers
     {
         private readonly IUserService _userService;
         private readonly ICustomFilterService _customFilterService;
+        private readonly IModeratorService _moderatorService;
        
-        public UserController(IUserService userService, ICustomFilterService customFilterService)
+        public UserController(IUserService userService, ICustomFilterService customFilterService, IModeratorService moderatorService)
         {
             _userService = userService;
             _customFilterService = customFilterService;
-
+            _moderatorService = moderatorService;
         }
 
 
@@ -38,13 +39,13 @@ namespace WebApplication1.Controllers
 
 
         //Пользователь хочет получить определенный тест из доступных ему
-        [HttpGet]
+        [HttpPut]
         [Route("tests/test")]
 
-        public async Task<ActionResult<TestToDoingResponse>> GetTestById([FromBody] string testId)
+        public async Task<ActionResult<TestToDoingResponse>> GetTestById([FromBody] Guid testId)
         {
             var asckerId = Request.Headers["asckerId"].ToString();
-            return Ok(await _userService.GetTestById(Guid.Parse(asckerId), Guid.Parse(testId)));
+            return Ok(await _userService.GetTestById(Guid.Parse(asckerId), testId));
         }
 
 
@@ -66,15 +67,30 @@ namespace WebApplication1.Controllers
 
         //Пользователь получил разбор ошибок (+Таблица со справочной информацией к каждому вопросу)
         //TODO: Проверка что пользователю принадлежит этот результат
-        [HttpGet]
+        [HttpPut]
         [Route("results/result")]
-        public async Task<ActionResult<TestResultResponse>> GetTestResult([FromBody]Guid resultId)
+        public async Task<ActionResult<TestResultResponse>> GetTestResult([FromBody] Guid testId)
         {
             var asckerId = Request.Headers["asckerId"].ToString();
-            return await _userService.GetTestResultToUser(null, Guid.Parse(asckerId), resultId);
+            return await _userService.GetTestResultToUser(Guid.Parse(asckerId), Guid.Parse(asckerId), testId);
         }
 
         //TODO: Пользователь получает список результатов
 
+        [HttpPut]
+        [Route("results")]
+        public async Task<ActionResult<List<TestResultResponse>>> GetResults([FromBody] DateRange dateRange)
+        {
+            var asckerId = Guid.Parse(Request.Headers["asckerId"].ToString());
+            var startDate = DateTimeOffset.Parse(dateRange.startDate);
+            var endDate = DateTimeOffset.Parse(dateRange.endDate);
+
+            var result = await _userService.GetResults(
+                    asckerId, 
+                    startDate,
+                    endDate);
+
+            return result;
+        }
     }
 }

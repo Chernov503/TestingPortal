@@ -1,0 +1,165 @@
+﻿@page "/admin/tests/create"
+
+@using Front.Services
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+
+<div>
+    <AdminMenu />
+</div>
+
+
+
+    <EditForm style="width:50%; margin: 0 auto" xs="12" Model="@Test" OnInvalidSubmit="@(() => success = false)" OnValidSubmit="@(() => success = true)">
+        <ObjectGraphDataAnnotationsValidator />
+        <MudStack Style="width:80%; margin:0 auto; border-color:grey">
+            <MudTextField  
+                    Style="margin:10px" 
+                    @bind-Value="Test.title" For="@(() => Test.title)"
+                    Label="*Название" 
+                    Variant="Variant.Text" />
+            <MudTextField 
+                    Style="margin:10px"
+                    @bind-Value="Test.description" For="@(() => Test.description)"
+                    Label="*Описание" 
+                    Variant="Variant.Text" />
+            <MudStack Row="true" Justify="Justify.FlexEnd">
+                <div>
+                    <MudToggleIconButton 
+                                    Style="margin:10px" @bind-Toggled="@Test.isPrivate"
+                                    Color="@Color.Success"
+                                     Icon="@Icons.Material.Filled.LockOpen"
+                                    ToggledColor="@Color.Error"
+                                     ToggledIcon="@Icons.Material.Filled.LockClock"
+                                     Title="Тест будет приватный"
+                                    ToggledTitle="Тест будет публичный" />
+                    <span>@(Test.isPrivate ? "Приватный" : "Публичный")</span>
+                </div>
+                <div>
+                    <MudTextField Style="width:470px"
+                            @bind-Value="Test.category" For="@(() => Test.category)" 
+                            Label="Ключевые слова" 
+                            Variant="Variant.Text" />
+                </div>
+            </MudStack>
+            <MudButton
+                Variant="Variant.Outlined"
+                ButtonType="ButtonType.Submit"
+                Color="Color.Success"
+                EndIcon="@Icons.Material.Filled.AddCircleOutline"
+                OnClick="@AddQuestion"
+                >Добавить Вопрос
+            </MudButton>
+            @foreach (var question in Test.questions)
+            {
+            <MudStack Style="width:80%; margin:0 auto; border-color:grey">
+                        <MudTextField Style="width:50%"
+                                      @bind-Value="question.questionTitle" For="@(()=> question.questionTitle)"
+                                      Label="*Назовите Вопрос"
+                                      Variant="Variant.Text"/>
+
+                        <MudTextField Style="width:50%"
+                              @bind-Value="question.questionCorrectInfo.title" For="@(()=> question.questionCorrectInfo.title)"
+                                      Label="*Пояснение к правильному ответу"
+                                      Variant="Variant.Text" />
+
+                    <MudStack Row="true" Justify="Justify.FlexEnd">
+                            <MudTextField Style="width:50%"
+                                          @bind-Value="question.questionCorrectInfo.imageLink"
+                                          Label="вставьте ссылку на картинку"
+                                          Variant="Variant.Text"/>
+
+                            <MudTextField Style="width:50%"
+                                          @bind-Value="question.questionCorrectInfo.videoLink"
+                                          Label="вставьте ссылку на видео"
+                                          Variant="Variant.Text" />
+                    </MudStack>
+
+                    <MudButton Variant="Variant.Outlined"
+                                ButtonType="ButtonType.Submit"
+                                Color="Color.Success"
+                                EndIcon="@Icons.Material.Filled.AddCircleOutline"
+                                OnClick="@(() => AddOption(question))">
+                                Добавить вариант ответа
+                    </MudButton>
+
+                    @foreach(var answer in question.createQuestionOptions)
+                    {
+                        <MudStack Row="true" Justify="Justify.FlexEnd">
+                                <div>
+                                    <MudTextField Style="width:470px"
+                                                  @bind-Value="answer.text" For="@(()=> answer.text)"
+                                                  Label="Вариант ответа"
+                                                  Variant="Variant.Text" />
+                                </div>
+                                <div>
+                                    <MudToggleIconButton Style="margin:10px" @bind-Toggled="@answer.isCorrect" 
+                                                         Icon="@Icons.Material.Filled.Block"
+                                                         Color="@Color.Error"
+                                                         ToggledIcon="@Icons.Material.Filled.DoneAll"
+                                                         ToggledColor="@Color.Success"
+                                                         Title="Ложный ответ"
+                                                         ToggledTitle="Правильный ответ"/>
+                                </div>
+                        </MudStack>
+                    }
+                </MudStack>
+            }
+        </MudStack>
+        <MudButton Size="Size.Large"
+                   ButtonType="ButtonType.Submit"
+                   Variant="Variant.Filled"
+                   Color="Color.Success"
+                   OnClick="@RegisterTest"
+                   EndIcon="@Icons.Material.Filled.AddCircleOutline">
+            Зарегистрировать тест
+        </MudButton>
+    </EditForm>
+
+
+
+
+@*         <MudForm Style="width:50%; margin:0 auto; background-color:grey">
+                    @foreach(var question in Questions)
+                    {
+                        <MudStack Style="background-color:aliceblue; width: 95%">
+
+                        </MudStack>
+                    }
+        </MudForm> *@
+
+
+@code {
+    [Inject] IAdminService _adminService { get; set; }
+    [Inject] NavigationManager _navigationManager { get; set; }
+    CreateTest Test = new CreateTest();
+
+    bool success = false;
+
+    private void AddQuestion() => Test.questions.Add(new CreateQuestion());
+
+    private void AddOption(CreateQuestion q) => q.createQuestionOptions.Add(new Createquestionoption());
+
+    private async void RegisterTest()
+    {
+        if (!success) return;
+
+        if (Test.questions.Count < 1) 
+        { Snackbar.Add("Добавьте как минимум 1 вопрос", Severity.Error); return; }
+
+        if (Test.questions.Any(x => x.createQuestionOptions.Count < 2)) 
+        { Snackbar.Add("В одном из вопросов меньше двух вариантов ответа", Severity.Error); return; }
+
+        if (Test.questions.Any(x => x.createQuestionOptions.Where(x => x.isCorrect).Count() < 1)) 
+        { Snackbar.Add("Один из вопросов не содержит правильного ответа", Severity.Error); return; }
+
+
+        var isAdded = await _adminService.CreateTest(Test);
+        Snackbar.Add("Тест добавлен", Severity.Success);
+
+        _navigationManager.NavigateTo("/admin/tests");
+
+    }
+
+
+}

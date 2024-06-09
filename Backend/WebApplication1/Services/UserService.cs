@@ -90,7 +90,7 @@ namespace WebApplication1.Services
                     foreach(var questionOptionEntity in questionOptionEntityList)
                     {
                         var questionOptionResponse = _mapper.Map<QuestionOptionResponse>(questionOptionEntity);
-                        questionOptionResponse = questionOptionResponse with { IsCorrect = null };
+                        questionOptionResponse = questionOptionResponse with { IsCorrect = false };
                         questonResponse.QuestionOptions.Add(questionOptionResponse);
                     }
 
@@ -124,14 +124,14 @@ namespace WebApplication1.Services
             await _userAnswerRepository.CreateRange(userTestDoneAnswerRequests, resultId);
         }
 
-        public async Task<TestResultResponse> GetTestResultToUser(Guid? askerId, Guid userId, Guid testResultId)
+        public async Task<TestResultResponse> GetTestResultToUser(Guid askerId, Guid userId, Guid testResultId)
         {
 
             var testResult = _mapper
                 .Map<TestResultResponse>( await 
                 _testResultRepository.GetById(testResultId) );
 
-            var userQuestionsResult = await _testResultRepository.GetUserOptionsResultResponsesByTestResultId(askerId, testResultId, userId);
+            var userQuestionsResult = await _testResultRepository.GetUserOptionsResultResponsesByTestResultId(askerId, testResult.Id, userId);
 
             testResult.UserQuestionResult.AddRange(userQuestionsResult.ToList());
 
@@ -174,6 +174,21 @@ namespace WebApplication1.Services
                     status: entity.Status);
             }
             else return null;
+        }
+
+        public async Task<List<TestResultResponse>> GetResults(Guid userId, DateTimeOffset startDate, DateTimeOffset endDate)
+        {
+            var resultsEntity = await _testResultRepository.GetUserResults(userId, userId, startDate, endDate);
+            var results = resultsEntity.Select(x => new TestResultResponse(x.Id,
+                                                                           _testRepository.GetById(x.TestId).Result.Title,
+                                                                           x.UserId,
+                                                                           x.TestId,
+                                                                           x.ResultAnswers,
+                                                                           x.ResultPercent,
+                                                                           x.ResultDateTime,
+                                                                           new List<UserQuestionResultResponse>())).ToList();
+
+            return results;
         }
 
     }

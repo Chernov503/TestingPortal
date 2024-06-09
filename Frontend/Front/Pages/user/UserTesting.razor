@@ -1,0 +1,98 @@
+﻿@page "/user/tests/test"
+
+@using Front.DTOs.TestDoing
+@using Front.Services
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+
+
+<UserMenu></UserMenu>
+
+@foreach(var quesion in Test.Questions)
+{
+    <MudCard Style="width:50%; margin:0 auto">
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h5">Вопрос @Test.Questions.IndexOf(quesion)+1</MudText>
+                    <MudText Typo="Typo.subtitle1">@quesion.questionTitle</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+        <MudCardContent>
+            @foreach(var option in quesion.questionOptions)
+            {
+                <MudStack Row AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Between">
+                        <span style="margin-right:auto;">@option.text</span>
+                        <MudToggleIconButton Style="margin:10px" @bind-Toggled="@option.isCorrect"
+                                             Icon="@Icons.Material.Filled.Block"
+                                             Color="@Color.Error"
+                                             ToggledIcon="@Icons.Material.Filled.DoneAll"
+                                             ToggledColor="@Color.Success"
+                                             Title="Ложный ответ"
+                                             ToggledTitle="Правильный ответ" />
+                </MudStack>
+            }
+        </MudCardContent>
+    </MudCard>
+}
+    <MudButton Size="Size.Large"
+               ButtonType="ButtonType.Submit"
+               Variant="Variant.Filled"
+               Color="Color.Success"
+                OnClick="@Validation"
+               EndIcon="@Icons.Material.Filled.AddCircleOutline">
+        Зарегистрировать тест
+    </MudButton>
+@code {
+    [Inject] IUserService _userService { get; set; }
+    [Inject] NavigationManager _navigationManager { get; set; }
+    [Inject] ILocalStorageService _localStorage { get; set; }
+
+    ToDoTestResultRequest Test = new();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        var testId =await _localStorage.GetItemAsync<Guid>("testId");
+
+        Test = await _userService.GetTestById(testId);
+        if (Test == null)
+        {
+            await _localStorage.RemoveItemAsync("testId");
+            Snackbar.Add("Ошибка загрузки теста", Severity.Error);
+            _navigationManager.NavigateTo("/user/tests");
+        }
+    }
+
+    public async Task Validation()
+    {
+        var isAnyQuestionWithoutCorrectUserAnswer = Test.Questions.Any(x => x.questionOptions.All(y => !y.isCorrect));
+
+        if(isAnyQuestionWithoutCorrectUserAnswer)
+        {
+            Snackbar.Add("У вопроса не может не быть правильного ответа", Severity.Error);
+            return;
+        }
+
+        RegisterResult();
+    }
+
+    protected async Task RegisterResult()
+    {
+        var resultRequest = Test.Questions.SelectMany(x => x.questionOptions.Where(r => r.isCorrect).Select(e => new UserTestDoneAnswerRequest(
+        Guid.Parse(Test.id), null, Guid.Parse(x.id), Guid.Parse(e.id)))).ToList();
+
+        var testPotResult = new PutTestResultRequest(Guid.Parse(Test.id), resultRequest);
+
+        var IsRegistered = await _userService.PostTestResalt(testPotResult);
+
+        if(IsRegistered)
+        {
+            Snackbar.Add("Тест завершен", Severity.Info);
+            await _localStorage.RemoveItemAsync("testId");
+            _navigationManager.NavigateTo("/user/results");
+        }
+    }
+
+
+}
+

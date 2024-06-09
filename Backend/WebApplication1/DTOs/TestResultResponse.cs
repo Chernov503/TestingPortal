@@ -14,17 +14,31 @@ namespace WebApplication1.DTOs
 
     public record TestResultResponse
     {
-        public Guid? Id { get; init; }
-        public Guid? UserId { get; init; }
-        public Guid? TestId { get; init; }
-        public int? ResultAnswers { get; init; }
-        public int? ResultPercent { get; init; }
-        public DateTimeOffset? ResultDateTime { get; init; }
+        public string testTitle {  get; set; }= String.Empty;
+        public Guid Id { get; init; }
+        public Guid UserId { get; init; }
+        public Guid TestId { get; init; }
+        public int ResultAnswers { get; init; }
+        public int ResultPercent { get; init; }
+        public DateTimeOffset ResultDateTime { get; init; }
         public List<UserQuestionResultResponse> UserQuestionResult { get; init; }
 
         public TestResultResponse()
         {
             UserQuestionResult = new List<UserQuestionResultResponse>();
+        }
+
+        //TODO: ВОЗМОЖНО ТУТ СЛОМАЛОСЬ Я ПЕРЕГРУЗИЛ КОНСТУКТОР
+        public TestResultResponse(Guid id, string testName, Guid userId, Guid testId, int resultAnswers, int resultPercent, DateTimeOffset resultDateTime, List<UserQuestionResultResponse> userQuestionResult)
+        {
+            Id = id;
+            testTitle = testName;
+            UserId = userId;
+            TestId = testId;
+            ResultAnswers = resultAnswers;
+            ResultPercent = resultPercent;
+            ResultDateTime = resultDateTime;
+            UserQuestionResult = userQuestionResult;
         }
         public TestResultResponse(Guid id, Guid userId, Guid testId, int resultAnswers, int resultPercent, DateTimeOffset resultDateTime, List<UserQuestionResultResponse> userQuestionResult)
         {

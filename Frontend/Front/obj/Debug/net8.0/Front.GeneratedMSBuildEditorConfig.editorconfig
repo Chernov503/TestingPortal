@@ -26,8 +26,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Games/TestingPortal/Frontend/Front/Pages/admin/AdminCreateTest.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cQWRtaW5DcmVhdGVUZXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Games/TestingPortal/Frontend/Front/Pages/admin/AdminTests.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cQWRtaW5UZXN0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/admin/AdminUsers.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cQWRtaW5Vc2Vycy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Games/TestingPortal/Frontend/Front/Pages/auth/Login.razor]
@@ -38,6 +46,46 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYXV0aFxSZWdpc3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Games/TestingPortal/Frontend/Front/Pages/moderator/ModeratorAccessToTest.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbW9kZXJhdG9yXE1vZGVyYXRvckFjY2Vzc1RvVGVzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/moderator/ModeratorFullTestInfo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbW9kZXJhdG9yXE1vZGVyYXRvckZ1bGxUZXN0SW5mby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/moderator/ModeratorFullTestWithAnswers.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbW9kZXJhdG9yXE1vZGVyYXRvckZ1bGxUZXN0V2l0aEFuc3dlcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/moderator/ModeratorTests.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbW9kZXJhdG9yXE1vZGVyYXRvclRlc3RzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/moderator/ModeratorUserList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbW9kZXJhdG9yXE1vZGVyYXRvclVzZXJMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/moderator/ModeratorUserResults.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbW9kZXJhdG9yXE1vZGVyYXRvclVzZXJSZXN1bHRzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/moderator/ModeratorUserResultShow.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbW9kZXJhdG9yXE1vZGVyYXRvclVzZXJSZXN1bHRTaG93LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/Other/AdminMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJcQWRtaW5NZW51LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/Other/DialogBlurryExample_Dialog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJcRGlhbG9nQmx1cnJ5RXhhbXBsZV9EaWFsb2cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/Other/DialogTemplateExample_Dialog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJcRGlhbG9nVGVtcGxhdGVFeGFtcGxlX0RpYWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Games/TestingPortal/Frontend/Front/Pages/Other/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,12 +94,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJcTWFpbk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Games/TestingPortal/Frontend/Front/Pages/Other/ModeratorMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJcTW9kZXJhdG9yTWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/Other/UserMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJcVXNlck1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Games/TestingPortal/Frontend/Front/Pages/Other/UserMenuComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJcVXNlck1lbnVDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Games/TestingPortal/Frontend/Front/Pages/sudo/Sudo.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcc3Vkb1xTdWRvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/user/UserResults.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxVc2VyUmVzdWx0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/user/UserTesting.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxVc2VyVGVzdGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/user/UserTestResult.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxVc2VyVGVzdFJlc3VsdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Games/TestingPortal/Frontend/Front/Pages/user/UserTests.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxVc2VyVGVzdHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Games/TestingPortal/Frontend/Front/_Imports.razor]

@@ -63,7 +63,7 @@ namespace WebApplication1.Controllers
         {
             var asckerId = Guid.Parse( HttpContext.Request.Headers["asckerId"].ToString() );
 
-            if (requestBody.status > 1) return BadRequest("Invalid Staff status");
+            if (requestBody.status > 2) return BadRequest("Invalid Staff status");
 
             return Ok (await _adminService.GetStatusToStaff(requestBody.userId, asckerId, requestBody.status));
         }

@@ -1,0 +1,97 @@
+﻿
+@page "/user/tests"
+
+
+@using Front.Services
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+
+<div>
+    <UserMenu/>
+    @if (HasUserIdTestingNow)
+    {
+        <MudStack Justify="Justify.FlexStart" Style="margin-bottom:10px" Row="true">
+            <MudButton Variant="Variant.Outlined" Color="Color.Info" Style="@($"width: 250px")" Href="/user/tests/test">Продолжить тест</MudButton>
+        </MudStack>
+    }
+</div>
+
+
+
+
+<div>
+    <MudDataGrid Items="@Tests" Filterable="true" FilterMode="@_filterMode" FilterCaseSensitivity="@_caseSensitivity">
+        <Columns>
+            <PropertyColumn Property="x => x.Title" Title="Название" Filterable="true" />
+            <PropertyColumn Property="x => x.Description" Title="Описание" />
+            <PropertyColumn Property="x => x.Category" Title="Категории" />
+            <PropertyColumn Property="x => x.Level" Title="Уровень сложности" />
+            <PropertyColumn Property="x => x.CreatedDate" Title="Дата" Filterable="true" />
+            <PropertyColumn Property="@(x => x.IsPrivate ? "Приватный" : "Публичный")" Title="Доступ" Filterable="true" />
+            <TemplateColumn Filterable="false">
+                <CellTemplate>
+                        <MudStack Row >
+                            <MudIconButton 
+                                Icon="@Icons.Material.Filled.Start" 
+                                Title="Начать тестирование"
+                                ButtonType="ButtonType.Reset" 
+                                Size="@Size.Small" 
+                                Variant="@Variant.Outlined" 
+                                Color="@Color.Success" 
+                                OnClick="@(() => StartTest(context))" />
+                        </MudStack>
+                    </CellTemplate>
+                </TemplateColumn>
+        </Columns>
+        <PagerContent>
+            <MudDataGridPager T="TestResponse" />
+        </PagerContent>
+    </MudDataGrid>
+
+</div>
+
+
+
+@code {
+    [Inject] IUserService _userService { get; set; }
+    [Inject] NavigationManager _navigationManager { get; set; }
+    [Inject] ILocalStorageService _localStorage { get; set; }
+
+    bool HasUserIdTestingNow;
+
+    List<TestResponse> Tests = new List<TestResponse>();
+
+    DataGridFilterMode _filterMode = DataGridFilterMode.Simple;
+    DataGridFilterCaseSensitivity _caseSensitivity = DataGridFilterCaseSensitivity.Default;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        Tests = await _userService.GetTests();
+
+        var hasUserIdTestingNow = await _localStorage.GetItemAsStringAsync("testId");
+        HasUserIdTestingNow = hasUserIdTestingNow == null ? false : true;
+    }
+
+    protected async Task StartTest(CellContext<TestResponse> u)
+    {
+        var parameters = new DialogParameters<DialogTemplateExample_Dialog>();
+        parameters.Add(x => x.ContentText, "Вы готовы начать тестирование?");
+        parameters.Add(x => x.ButtonText, "Начать");
+        parameters.Add(x => x.Color, Color.Success);
+
+        var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
+
+        var dialog = DialogService.Show<DialogTemplateExample_Dialog>("", parameters, options);
+
+        var result = await dialog.Result;
+
+        if(!result.Cancelled)
+        {
+            await _localStorage.SetItemAsync<Guid>("testId", u.Item.Id);
+            _navigationManager.NavigateTo("/user/tests/test");
+        }
+    }
+}
+
+

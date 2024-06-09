@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vrOmZBWgLURYn1NSfbjEVUSM80dNhfod8RxHtZdHDQ4=",
+  "Hash": "q+bvejtuVyLHmhBUnARASIk3MM6E6S5biB4BnyVjdk8=",
   "Source": "Front",
   "BasePath": "/",
   "Mode": "Root",
@@ -300,6 +300,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Games\\TestingPortal\\Frontend\\Front\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.Authorization.wasm"
+    },
+    {
+      "Identity": "C:\\Games\\TestingPortal\\Frontend\\Front\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.DataAnnotations.Validation.wasm",
+      "SourceId": "Front",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Games\\TestingPortal\\Frontend\\Front\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.DataAnnotations.Validation.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Games\\TestingPortal\\Frontend\\Front\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.Components.DataAnnotations.Validation.wasm"
     },
     {
       "Identity": "C:\\Games\\TestingPortal\\Frontend\\Front\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm",
@@ -6057,6 +6076,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Games\\TestingPortal\\Frontend\\Front\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Xml.Linq.wasm"
+    },
+    {
+      "Identity": "C:\\Games\\TestingPortal\\Frontend\\Front\\obj\\Debug\\net8.0\\compressed\\km7uh5ybgj.gz",
+      "SourceId": "Front",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Games\\TestingPortal\\Frontend\\Front\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.DataAnnotations.Validation.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Games\\TestingPortal\\Frontend\\Front\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.DataAnnotations.Validation.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Games\\TestingPortal\\Frontend\\Front\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.DataAnnotations.Validation.wasm"
     },
     {
       "Identity": "C:\\Games\\TestingPortal\\Frontend\\Front\\obj\\Debug\\net8.0\\compressed\\kx50ffzoo0.gz",

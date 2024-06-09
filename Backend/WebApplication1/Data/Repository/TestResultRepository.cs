@@ -40,7 +40,7 @@ namespace WebApplication1.Data.Repository
                         .AsNoTracking()
                         .SingleOrDefaultAsync(x => x.Id == id);
 
-        public async Task<List<UserQuestionResultResponse>> GetUserOptionsResultResponsesByTestResultId(Guid? askerId,Guid testResultId, Guid userId)
+        public async Task<List<UserQuestionResultResponse>> GetUserOptionsResultResponsesByTestResultId(Guid askerId, Guid testResultId, Guid userId)
         {
             if(askerId != userId)
             {
@@ -116,16 +116,31 @@ namespace WebApplication1.Data.Repository
 
         }
 
-        public async Task<List<TestResultEntity>> GetUserResults(Guid id,
+        public async Task<List<TestResultResponse>> GetUserResults(Guid id,
                                                                  Guid askerId,
                                                                  DateTimeOffset startDate,
                                                                  DateTimeOffset endDate)
-            => await _context.TestResults
+        {
+            var testResultEntityList = await _context.TestResults
                         .AsNoTracking()
                         .Where(x => x.UserId == id
                                 && x.ResultDateTime >= startDate
                                 && x.ResultDateTime <= endDate)
                         .ToListAsync();
+
+            var resultList = testResultEntityList.Select(x => new TestResultResponse(
+                    id: x.Id,
+                    testName: _context.Tests.Find(x.TestId).Title,
+                    userId: x.UserId,
+                    testId: x.TestId,
+                    resultAnswers: x.ResultAnswers,
+                    resultPercent: x.ResultPercent,
+                    resultDateTime: x.ResultDateTime,
+                    new List<UserQuestionResultResponse>())).ToList();
+
+            return resultList;
+        }
+
 
         public async Task<bool> DeleteUserTestResult(Guid id, Guid staffId, Guid resultId)
         {
@@ -133,5 +148,12 @@ namespace WebApplication1.Data.Repository
 
             return await _context.TestResults.AsNoTracking().AnyAsync(x => x.Id == resultId);
         }
+
+        public async Task<TestResultEntity> GetLastUserResult(Guid userId) => 
+                await _context.TestResults
+                    .Where(x => x.UserId == userId)
+                    .OrderByDescending(x => x.ResultDateTime)
+                    .FirstOrDefaultAsync() 
+                    ?? throw new KeyNotFoundException();
     }
 }

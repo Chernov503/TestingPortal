@@ -103,7 +103,7 @@ namespace WebApplication1.Services
         {
             var testResultList = await _testResultRepository.GetUserResults(staffId, id, startDate, endDate);
 
-            return testResultList.Select(x => _mapper.Map<TestResultResponse>(x)).ToList();
+            return testResultList;
         }
 
         public async Task<bool> DeleteUserTestResult(Guid id, Guid staffId, Guid resultId)

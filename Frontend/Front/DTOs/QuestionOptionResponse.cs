@@ -7,7 +7,7 @@ namespace Front.DTOs
             Guid Id,
             Guid QuestionId,
             string Text,
-            bool? IsCorrect);
+            bool IsCorrect);
 
         
 }

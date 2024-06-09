@@ -75,22 +75,23 @@ namespace WebApplication1.Controllers
             var startDate = DateTimeOffset.Parse(dateRange.startDate);
             var endDate = DateTimeOffset.Parse(dateRange.endDate);
 
-            return Ok(await _moredatorService.GetTestStatistic(asckerId,
+            var result = await _moredatorService.GetTestStatistic(asckerId,
                                                                testId,
                                                                isPrivate,
                                                                startDate,
-                                                               endDate));
+                                                               endDate);
+
+            return Ok(result);
         }
 
         [HttpPut]
         [Route("users/{staffId:guid}/results")]
-        [TypeFilter(typeof(SimilarCompanyFilter))]
         public async Task<ActionResult<List<TestResultResponse>>> GetUserResults(Guid staffId,
                                                                                  [FromBody] DateRange dateRange)
         {
             var asckerId = Guid.Parse(Request.Headers["asckerId"].ToString());
-            var startDate = DateTimeOffset.Parse(dateRange.startDate);
-            var endDate = DateTimeOffset.Parse(dateRange.endDate);
+            var startDate = DateTimeOffset.Parse(dateRange.startDate).ToUniversalTime();
+            var endDate = DateTimeOffset.Parse(dateRange.endDate).ToUniversalTime();
 
             return Ok(await _moredatorService.GetUserResults(asckerId, staffId, startDate, endDate));
         }

@@ -3,13 +3,18 @@
 namespace Front.DTOs
 {
 
-    public record TestResultResponse
+    public class TestResultResponse
     {
-        public Guid? Id { get; init; }
-        public Guid? UserId { get; init; }
-        public Guid? TestId { get; init; }
-        public int? ResultAnswers { get; init; }
-        public int? ResultPercent { get; init; }
-        public DateTimeOffset? ResultDateTime { get; init; }
+        //TODO: ВОЗМОЖНООШИБКА Я ДОБАВИЛ СТРОКУ
+        public string testTitle { get; set; }= String.Empty;
+        public string Id { get; set; }
+        public string UserId { get; set; }
+        public string TestId { get; set; }
+        public int ResultAnswers { get; set; }
+        public int ResultPercent { get; set; }
+        public string ResultDateTime { get; set; }
     }
 }
+
+
+

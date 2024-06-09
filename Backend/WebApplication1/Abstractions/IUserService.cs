@@ -10,9 +10,10 @@ namespace WebApplication1.Abstractions
             Guid userId,
             Guid testId,
             List<UserTestDoneAnswerRequest> userTestDoneAnswerRequests);
-        public Task<TestResultResponse> GetTestResultToUser(Guid? askerId, Guid userId, Guid testResultId);
+        public Task<TestResultResponse> GetTestResultToUser(Guid askerId, Guid userId, Guid testResultId);
         public Task<LoginResponse> Login(LoginUserRequest request);
         public Task Register(RegisterUserRequest request);
+        public Task<List<TestResultResponse>> GetResults(Guid userId, DateTimeOffset startDate, DateTimeOffset endDate);
     }
     
 }

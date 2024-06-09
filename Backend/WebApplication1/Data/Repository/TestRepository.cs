@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using WebApplication1.Abstractions;
 using WebApplication1.Data.Entitiy;
@@ -214,37 +215,43 @@ namespace WebApplication1.Data.Repository
             DateTimeOffset startDate,
             DateTimeOffset endDate)
         {
-            var TestResultList = new List<TestResultEntity>();
+
+
+            startDate = startDate.ToUniversalTime();
+            endDate = endDate.ToUniversalTime();
+
+            IQueryable<TestResultEntity> TestResultQueryable;
 
             if (isPrivate)
             {
                 var ascker = await _context.Users.FindAsync(asckerId);
 
-                TestResultList = await _context.TestResults.Where(x => x.TestId == testId
+                TestResultQueryable = _context.TestResults.Where(x => x.TestId == testId
                                                                 && x.User.Company == ascker.Company
                                                                 && x.ResultDateTime >= startDate
-                                                                && x.ResultDateTime <= endDate).ToListAsync();
+                                                                && x.ResultDateTime <= endDate);
 
 
             }
             else
             {
-                TestResultList = await _context.TestResults.Where(x => x.TestId == testId
+                TestResultQueryable = _context.TestResults.Where(x => x.TestId == testId
                                                                 && x.ResultDateTime >= startDate
-                                                                && x.ResultDateTime <= endDate).ToListAsync();
+                                                                && x.ResultDateTime <= endDate);
             }
 
 
-
+            List<TestResultEntity> testResultEntities = TestResultQueryable.ToList();
 
             var MainStatisticPercentOfResultPercent = new Dictionary<int, int>()
             {
-                {20, TestResultList.Where(x => x.ResultPercent <= 20).Count() },
-                {40, TestResultList.Where(x => x.ResultPercent <= 40 && x.ResultPercent > 20).Count() },
-                {60, TestResultList.Where(x => x.ResultPercent <= 60 && x.ResultPercent > 40).Count() },
-                {80, TestResultList.Where(x => x.ResultPercent <= 80 && x.ResultPercent > 60).Count() },
-                {100, TestResultList.Where(x => x.ResultPercent <= 100 && x.ResultPercent > 80).Count() }
+                {20, testResultEntities.Where(x => x.ResultPercent <= 20).Count() },
+                {40, testResultEntities.Where(x => x.ResultPercent <= 40 && x.ResultPercent > 20).Count() },
+                {60, testResultEntities.Where(x => x.ResultPercent <= 60 && x.ResultPercent > 40).Count() },
+                {80, testResultEntities.Where(x => x.ResultPercent <= 80 && x.ResultPercent > 60).Count() },
+                {100, testResultEntities.Where(x => x.ResultPercent <= 100 && x.ResultPercent > 80).Count() }
             };
+
 
 
             List<QuestionStatisticResponse> QuestionStatistics = await
@@ -255,7 +262,16 @@ namespace WebApplication1.Data.Repository
                         (
                             x.QuestionTitle,
 
-                            null,
+
+                        // Начало запроса
+                            TestResultQueryable
+                            .SelectMany(tr => tr.UserAnswers) // Получение всех UserAnswers связанных с TestResult
+                            .GroupBy(ua => ua.TestResultId) // Группировка по TestResultId
+                            // Фильтрация по условию, что все UserAnswer в группе должны соответствовать заданным условиям
+                            .Where(group => group.All(ua => ua.QuestionId != x.Id || ua.IsCorrect))
+                            // Далее подсчет количества групп сущностей UserAnswer
+                            .Count(),
+
 
                             x.QuestionOptions
                                 .Select(qo => new QuestionOptionsStatisticResponse
@@ -265,7 +281,7 @@ namespace WebApplication1.Data.Repository
                                                 qo.IsCorrect,
 
                                                 _context.UserAnswers
-                                            .Where(ua => TestResultList.Select(x => x.Id).Contains(ua.TestResultId)
+                                            .Where(ua => testResultEntities.Select(x => x.Id).Contains(ua.TestResultId)
                                                 && ua.QuestionOptionId == qo.Id)
                                 .Count()
                                         )

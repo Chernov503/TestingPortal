@@ -24,9 +24,9 @@ namespace Front.Services
             _auth = auth;
         }
 
-        public async Task<bool> CreateTest(CreateTestRequest requestBody)
+        public async Task<bool> CreateTest(CreateTest requestBody)
         {
-            var response = await SendRequest<CreateTestRequest>(requestBody, HttpMethod.Post, "admin/tests/create");
+            var response = await SendRequest<CreateTest>(requestBody, HttpMethod.Post, "admin/tests/create");
 
             return response.IsSuccessStatusCode;
         }

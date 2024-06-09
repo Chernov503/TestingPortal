@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/D+T5JptF3w=",
+  "dgSpecHash": "/YG6yBLXvLg=",
   "success": true,
   "projectFilePath": "C:\\Games\\TestingPortal\\Frontend\\Front\\Front.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\sofia\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.5\\microsoft.aspnetcore.authorization.8.0.5.nupkg.sha512",
     "C:\\Users\\sofia\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.5\\microsoft.aspnetcore.components.8.0.5.nupkg.sha512",
     "C:\\Users\\sofia\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.5\\microsoft.aspnetcore.components.analyzers.8.0.5.nupkg.sha512",
+    "C:\\Users\\sofia\\.nuget\\packages\\microsoft.aspnetcore.components.dataannotations.validation\\3.2.0-rc1.20223.4\\microsoft.aspnetcore.components.dataannotations.validation.3.2.0-rc1.20223.4.nupkg.sha512",
     "C:\\Users\\sofia\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\8.0.5\\microsoft.aspnetcore.components.forms.8.0.5.nupkg.sha512",
     "C:\\Users\\sofia\\.nuget\\packages\\microsoft.aspnetcore.components.web\\8.0.5\\microsoft.aspnetcore.components.web.8.0.5.nupkg.sha512",
     "C:\\Users\\sofia\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.5\\microsoft.aspnetcore.components.webassembly.8.0.5.nupkg.sha512",

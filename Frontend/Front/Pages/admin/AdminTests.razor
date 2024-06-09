@@ -2,10 +2,13 @@
 
 @using Front.Services
 @inject ISnackbar Snackbar
+@inject IDialogService DialogService
 
 <div>
-    <UserMenuComponent></UserMenuComponent>
+    <AdminMenu/>
 </div>
+
+
 
 <div>
     <MudButton OnClick="@CreateTest"
@@ -29,7 +32,13 @@
             <TemplateColumn CellClass="d-flex justify-end">
                 <CellTemplate>
                     <MudStack Row>
-                        <MudButton ButtonType="ButtonType.Reset" Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Primary" OnClick="@(() => Delete(context))">Удалить</MudButton>
+                        <MudIconButton 
+                            Icon="@Icons.Material.Filled.Delete" 
+                            ButtonType="ButtonType.Reset" 
+                            Size="@Size.Small" 
+                            Variant="@Variant.Filled" 
+                            Color="@Color.Error" 
+                            OnClick="@(() => Delete(context))" />
                     </MudStack>
                 </CellTemplate>
             </TemplateColumn>
@@ -61,6 +70,7 @@
         DataGridFilterMode _filterMode = DataGridFilterMode.Simple;
         DataGridFilterCaseSensitivity _caseSensitivity = DataGridFilterCaseSensitivity.Default;
 
+
         protected override async Task OnInitializedAsync()
         {
             Tests = await _adminService.GetTests();
@@ -68,20 +78,33 @@
 
         protected async Task Delete(CellContext<TestResponse> u)
         {
-            //проверить есть ли Id в сущности
-            var isDeleted = await _adminService.DeleteTest(u.Item.Id);
+            //TODO: Сделать такие диалоги везде
+            var parameters = new DialogParameters<DialogTemplateExample_Dialog>();
+            parameters.Add(x => x.ContentText, "Do you really want to delete these records? This process cannot be undone.");
+            parameters.Add(x => x.ButtonText, "Delete");
+            parameters.Add(x => x.Color, Color.Error);
 
-            if (isDeleted)
+            var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
+
+            var dialog = DialogService.Show<DialogTemplateExample_Dialog>("Delete", parameters, options);
+
+            var result = await dialog.Result;
+
+            if(!result.Cancelled)
             {
-                Snackbar.Add("Успешно!", Severity.Success);
-                Tests.Remove(u.Item);
-            }
-            else
-            {
-                Snackbar.Add("Ошибка удаления!", Severity.Error);
-            }
+                //проверить есть ли Id в сущности
+                var isDeleted = await _adminService.DeleteTest(u.Item.Id);
 
-
+                if (isDeleted)
+                {
+                    Snackbar.Add("Успешно!", Severity.Success);
+                    Tests.Remove(u.Item);
+                }
+                else
+                {
+                    Snackbar.Add("Ошибка удаления!", Severity.Error);
+                }
+            }
         }
 
         public async Task CreateTest()
@@ -89,8 +112,5 @@
             _navigationManager.NavigateTo("/admin/tests/create");
         }
     }
-
-
-
 </div>
 

@@ -3,24 +3,52 @@
   "WorkspaceRootPath": "C:\\Games\\TestingPortal\\Frontend\\Front\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\pages\\admin\\admintests.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:pages\\admin\\admintests.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\pages\\moderator\\moderatortests.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:pages\\moderator\\moderatortests.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\pages\\moderator\\moderatoruserresultshow.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:pages\\moderator\\moderatoruserresultshow.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\pages\\sudo\\sudo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:pages\\sudo\\sudo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\services\\moderatorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:services\\moderatorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\dtos\\testresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:dtos\\testresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\pages\\user\\usertestresult.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:pages\\user\\usertestresult.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\services\\superadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:services\\superadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\pages\\moderator\\moderatoruserlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:pages\\moderator\\moderatoruserlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\dtos\\testresultresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:dtos\\testresultresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\pages\\moderator\\moderatorfulltestinfo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:pages\\moderator\\moderatorfulltestinfo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\pages\\moderator\\moderatoraccesstotest.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:pages\\moderator\\moderatoraccesstotest.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\pages\\moderator\\moderatorfulltestwithanswers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:pages\\moderator\\moderatorfulltestwithanswers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\dtos\\testfullinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:dtos\\testfullinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\dtos\\teststatistic\\testfullstatisticresonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:dtos\\teststatistic\\testfullstatisticresonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|c:\\games\\testingportal\\frontend\\front\\pages\\auth\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA761450-9926-48C7-80CA-F45CDFD1436C}|Front.csproj|solutionrelative:pages\\auth\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,79 +57,159 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 278,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 1256,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Sudo.razor",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\sudo\\Sudo.razor",
-              "RelativeDocumentMoniker": "Pages\\sudo\\Sudo.razor",
-              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\sudo\\Sudo.razor",
-              "RelativeToolTip": "Pages\\sudo\\Sudo.razor",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAACqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-06T14:19:46.727Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminTests.razor",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\admin\\AdminTests.razor",
-              "RelativeDocumentMoniker": "Pages\\admin\\AdminTests.razor",
-              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\admin\\AdminTests.razor",
-              "RelativeToolTip": "Pages\\admin\\AdminTests.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-06T14:19:17.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SuperAdminService.cs",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Services\\SuperAdminService.cs",
-              "RelativeDocumentMoniker": "Services\\SuperAdminService.cs",
-              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Services\\SuperAdminService.cs",
-              "RelativeToolTip": "Services\\SuperAdminService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwEcAAAAJAAAA",
+              "Title": "ModeratorService.cs",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Services\\ModeratorService.cs",
+              "RelativeDocumentMoniker": "Services\\ModeratorService.cs",
+              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Services\\ModeratorService.cs",
+              "RelativeToolTip": "Services\\ModeratorService.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAUwEYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T13:50:09.868Z",
+              "WhenOpened": "2024-06-09T10:57:46.249Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AdminService.cs",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Services\\AdminService.cs",
-              "RelativeDocumentMoniker": "Services\\AdminService.cs",
-              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Services\\AdminService.cs",
-              "RelativeToolTip": "Services\\AdminService.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAowEcAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T13:49:20.832Z",
+              "Title": "ModeratorUserResultShow.razor",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\moderator\\ModeratorUserResultShow.razor",
+              "RelativeDocumentMoniker": "Pages\\moderator\\ModeratorUserResultShow.razor",
+              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\moderator\\ModeratorUserResultShow.razor",
+              "RelativeToolTip": "Pages\\moderator\\ModeratorUserResultShow.razor",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAA0AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-09T10:52:28.507Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 128,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TestResponse.cs",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\DTOs\\TestResponse.cs",
-              "RelativeDocumentMoniker": "DTOs\\TestResponse.cs",
-              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\DTOs\\TestResponse.cs",
-              "RelativeToolTip": "DTOs\\TestResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T14:22:00.48Z",
+              "Title": "UserTestResult.razor",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\user\\UserTestResult.razor",
+              "RelativeDocumentMoniker": "Pages\\user\\UserTestResult.razor",
+              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\user\\UserTestResult.razor",
+              "RelativeToolTip": "Pages\\user\\UserTestResult.razor",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAswJEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-08T23:23:48.432Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TestResultResponse.cs",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\DTOs\\TestResultResponse.cs",
+              "RelativeDocumentMoniker": "DTOs\\TestResultResponse.cs",
+              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\DTOs\\TestResultResponse.cs",
+              "RelativeToolTip": "DTOs\\TestResultResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T08:32:03.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ModeratorUserList.razor",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\moderator\\ModeratorUserList.razor",
+              "RelativeDocumentMoniker": "Pages\\moderator\\ModeratorUserList.razor",
+              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\moderator\\ModeratorUserList.razor",
+              "RelativeToolTip": "Pages\\moderator\\ModeratorUserList.razor",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACgAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-08T23:54:24.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ModeratorTests.razor",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\moderator\\ModeratorTests.razor",
+              "RelativeDocumentMoniker": "Pages\\moderator\\ModeratorTests.razor",
+              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\moderator\\ModeratorTests.razor*",
+              "RelativeToolTip": "Pages\\moderator\\ModeratorTests.razor*",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAAAJcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-09T00:25:05.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ModeratorFullTestInfo.razor",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\moderator\\ModeratorFullTestInfo.razor",
+              "RelativeDocumentMoniker": "Pages\\moderator\\ModeratorFullTestInfo.razor",
+              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\moderator\\ModeratorFullTestInfo.razor",
+              "RelativeToolTip": "Pages\\moderator\\ModeratorFullTestInfo.razor",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAowH4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-08T19:03:14.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ModeratorAccessToTest.razor",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\moderator\\ModeratorAccessToTest.razor",
+              "RelativeDocumentMoniker": "Pages\\moderator\\ModeratorAccessToTest.razor",
+              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\moderator\\ModeratorAccessToTest.razor",
+              "RelativeToolTip": "Pages\\moderator\\ModeratorAccessToTest.razor",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-09T00:25:37.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TestFullInfo.cs",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\DTOs\\TestFullInfo.cs",
+              "RelativeDocumentMoniker": "DTOs\\TestFullInfo.cs",
+              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\DTOs\\TestFullInfo.cs",
+              "RelativeToolTip": "DTOs\\TestFullInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAUAAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T23:17:46.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ModeratorFullTestWithAnswers.razor",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\moderator\\ModeratorFullTestWithAnswers.razor",
+              "RelativeDocumentMoniker": "Pages\\moderator\\ModeratorFullTestWithAnswers.razor",
+              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\moderator\\ModeratorFullTestWithAnswers.razor",
+              "RelativeToolTip": "Pages\\moderator\\ModeratorFullTestWithAnswers.razor",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-08T23:06:48.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\auth\\Login.razor",
+              "RelativeDocumentMoniker": "Pages\\auth\\Login.razor",
+              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\Pages\\auth\\Login.razor",
+              "RelativeToolTip": "Pages\\auth\\Login.razor",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEYAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-08T22:33:34.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TestFullStatisticResonse.cs",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Frontend\\Front\\DTOs\\TestStatistic\\TestFullStatisticResonse.cs",
+              "RelativeDocumentMoniker": "DTOs\\TestStatistic\\TestFullStatisticResonse.cs",
+              "ToolTip": "C:\\Games\\TestingPortal\\Frontend\\Front\\DTOs\\TestStatistic\\TestFullStatisticResonse.cs",
+              "RelativeToolTip": "DTOs\\TestStatistic\\TestFullStatisticResonse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T21:25:53.698Z"
             }
           ]
         }

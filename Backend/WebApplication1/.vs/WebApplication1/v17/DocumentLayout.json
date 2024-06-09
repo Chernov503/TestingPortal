@@ -3,44 +3,20 @@
   "WorkspaceRootPath": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\controllers\\superadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:controllers\\superadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\filters\\userauthorise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:filters\\userauthorise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\services\\moderatorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:services\\moderatorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\abstractions\\icustomfilterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:abstractions\\icustomfilterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\filters\\registerfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:filters\\registerfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\services\\customfilterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:services\\customfilterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|c:\\games\\testingportal\\backend\\webapplication1\\controllers\\moderatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6098B8A-80C8-4A04-AA42-45B4A81C40AD}|WebApplication1.csproj|solutionrelative:controllers\\moderatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,134 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 401,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminService.cs",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Services\\AdminService.cs",
-              "RelativeDocumentMoniker": "Services\\AdminService.cs",
-              "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Services\\AdminService.cs",
-              "RelativeToolTip": "Services\\AdminService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACoAAABVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T13:42:28.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwBwAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T13:41:16.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwBYAAAAjAAAA",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAkwEkAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T11:14:45.071Z",
+              "WhenOpened": "2024-06-09T11:03:28.582Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserAuthorise.cs",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Filters\\UserAuthorise.cs",
-              "RelativeDocumentMoniker": "Filters\\UserAuthorise.cs",
-              "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Filters\\UserAuthorise.cs",
-              "RelativeToolTip": "Filters\\UserAuthorise.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T06:56:17.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService.cs",
               "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Services\\UserService.cs",
               "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AQIAAJgAAAAAAAAAAAASwK8AAAAdAAAA",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAewIEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T06:54:09.637Z",
+              "WhenOpened": "2024-06-09T09:08:14.5Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SuperAdminController.cs",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Controllers\\SuperAdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SuperAdminController.cs",
-              "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Controllers\\SuperAdminController.cs",
-              "RelativeToolTip": "Controllers\\SuperAdminController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwCkAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T17:48:32.944Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ICustomFilterService.cs",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Abstractions\\ICustomFilterService.cs",
-              "RelativeDocumentMoniker": "Abstractions\\ICustomFilterService.cs",
-              "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Abstractions\\ICustomFilterService.cs",
-              "RelativeToolTip": "Abstractions\\ICustomFilterService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T17:19:58.056Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAswBkAAAAQAAAA",
+              "Title": "ModeratorController.cs",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Controllers\\ModeratorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ModeratorController.cs",
+              "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Controllers\\ModeratorController.cs",
+              "RelativeToolTip": "Controllers\\ModeratorController.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAwwGAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T12:56:22.993Z",
+              "WhenOpened": "2024-06-08T19:39:33.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CustomFilterService.cs",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Services\\CustomFilterService.cs",
-              "RelativeDocumentMoniker": "Services\\CustomFilterService.cs",
-              "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Services\\CustomFilterService.cs",
-              "RelativeToolTip": "Services\\CustomFilterService.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAgwCcAAAAIAAAA",
+              "DocumentIndex": 0,
+              "Title": "ModeratorService.cs",
+              "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Services\\ModeratorService.cs",
+              "RelativeDocumentMoniker": "Services\\ModeratorService.cs",
+              "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Services\\ModeratorService.cs",
+              "RelativeToolTip": "Services\\ModeratorService.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAwwGgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T12:53:41.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RegisterFilter.cs",
-              "DocumentMoniker": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Filters\\RegisterFilter.cs",
-              "RelativeDocumentMoniker": "Filters\\RegisterFilter.cs",
-              "ToolTip": "C:\\Games\\TestingPortal\\Backend\\WebApplication1\\Filters\\RegisterFilter.cs",
-              "RelativeToolTip": "Filters\\RegisterFilter.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwB0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T12:53:31.959Z"
+              "WhenOpened": "2024-06-08T19:39:17.38Z",
+              "EditorCaption": ""
             }
           ]
         }
